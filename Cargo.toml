@@ -1,0 +1,21 @@
+[package]
+name = "show-path"
+version = "0.1.0"
+authors = ["moisutsu <moisutsu@gmail.com>"]
+edition = "2021"
+description = "Command line tool for displaying absolute paths"
+repository = "https://github.com/moisutsu/show-path"
+license = "MIT"
+readme = "README.md"
+# see https://crates.io/category_slugs
+categories = ["command-line-utilities"]
+# see https://crates.io/keywords
+keywords = ["cli"]
+
+[[bin]]
+name = "path"
+path = "src/main.rs"
+
+[dependencies]
+anyhow = "1.0.53"
+clap = { version = "3.0.14", features = ["derive"] }
