@@ -6,7 +6,9 @@ use std::path::Path;
 fn main() -> Result<()> {
     let args = Args::parse();
 
-    let path = Path::new(&args.path);
+    let path_name = args.path.unwrap_or_else(|| ".".to_string());
+
+    let path = Path::new(&path_name);
 
     let absolute_path = path.canonicalize()?;
 
